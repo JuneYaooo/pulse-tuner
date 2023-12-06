@@ -1,7 +1,7 @@
 # pulse-tuner
 
 
-[[Chinese Version](https://github.com/JuneYaooo/pulse-tuner/blob/main/README.md)]   [[English Version](https://github.com/JuneYaooo/pulse-tuner/blob/main/README_zh.md)]
+[[English Version](https://github.com/JuneYaooo/pulse-tuner/blob/main/README.md)]   [[Chinese Version](https://github.com/JuneYaooo/pulse-tuner/blob/main/README_zh.md)]
 
 With only twenty pieces of data, you can train your own robot in one and a half minutes! You can try this LLM Tuner suitable for PULSE.
 

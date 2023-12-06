@@ -1,6 +1,6 @@
 # pulse-tuner
 
-[[中文](https://github.com/JuneYaooo/pulse-tuner/blob/main/README.md)]   [[英文](https://github.com/JuneYaooo/pulse-tuner/blob/main/README_zh.md)]
+[[英文](https://github.com/JuneYaooo/pulse-tuner/blob/main/README.md)]   [[中文](https://github.com/JuneYaooo/pulse-tuner/blob/main/README_zh.md)]
 
 只需20条数据，就可以在两分钟内训练出属于自己的大模型！
 
