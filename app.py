@@ -113,7 +113,6 @@ def on_test(model_name, select_lora, lora_type, temperature,top_p,test_data_file
     result_paths = []
     model = load_model(model_name,select_lora,lora_type,temperature,top_p)
     test_data_file = test_data_file if isinstance(test_data_file, list) else [test_data_file]
-    print('test_data_file',test_data_file)
     for file in test_data_file:
         filename = os.path.basename(file.name)
         shutil.move(file.name, "workspace/data/" + filename)
