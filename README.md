@@ -88,10 +88,13 @@ python app.py
 
 ## Lora Example
 You can use these parameters to reproduce test lora: `lora_type` = 'QLoRA', `per_device_train_batch_size`=4,`num_train_epochs`=15,`learning_rate`=0.001, using 'example_train.xlsx'
+
 ![Demo Lora Training](figures/train_res_demo.png)
 
 only takes 1.5 minutes, can reach the following effects:
+
 ![example_output1](figures/example_output1.png)
+
 ![example_output2](figures/example_output2.png)
 
 

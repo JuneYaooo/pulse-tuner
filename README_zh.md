@@ -87,10 +87,13 @@ python app.py
 
 ## Lora示例
 可以使用这些参数来复现测试Lora：`lora_type` = 'QLoRA'，`per_device_train_batch_size`=4，`num_train_epochs`=15，`learning_rate`=0.001，使用 'example_train.xlsx'
+
 ![Demo Lora Training](figures/train_res_demo.png)
 
 仅需1.5分钟，即可达到以下效果：
+
 ![example_output1](figures/example_output1.png)
+
 ![example_output2](figures/example_output2.png)
 
 
