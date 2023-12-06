@@ -155,11 +155,10 @@ def on_test(model_name, select_lora, lora_type, temperature,top_p,test_data_file
 
 
 def get_chat_answer(query,model_name,select_lora,lora_type,temperature,top_p,instruction,chatbot):
-    print('chatbot1',chatbot)
     model = load_model(model_name,select_lora,lora_type,temperature,top_p)
     res , (prompt_length, response_length)=  model.chat(query,chatbot,instruction) 
     chatbot.append([query,res])
-    print('chatbot2',chatbot)
+    print('chatbot',chatbot)
     return chatbot, ""
 
     
