@@ -11,7 +11,7 @@ With only twenty pieces of data, you can train your own robot in one and a half 
 
 If there are any issues with direct usage, you can download the PULSE model to your local machine from: [https://huggingface.co/OpenMEDLab/PULSE-7bv5](https://huggingface.co/OpenMEDLab/PULSE-7bv5)
 
-Then, modify the model path in the `configs/common_config.py` file to the local path. You can modify the paths in the `model_path` variable.
+Then, modify the model path in the `configs/common_config.py` file to the local path. You can modify the paths in the `model_path` variable. Find the absolute path of the profile.d/conda.sh file and modify the corresponding `conda_env_file` path。
 
 ### Installation
 
