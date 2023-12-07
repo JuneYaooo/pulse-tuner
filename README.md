@@ -64,6 +64,7 @@ python app.py
 
 #### Try to chat with the lora
 
+- Please make sure to select an available Lora. There is currently no sample Lora available. You need to train one yourself first.
 - Optional whether to add system commands;
 - Currently supports multiple rounds of dialogue
 - Streaming conversations to be supported

@@ -105,6 +105,10 @@ def load_model(model_name,project_name,lora_type,temperature,top_p):
 
 
 def on_test(model_name, select_lora, lora_type, temperature,top_p,test_data_file):
+    model_file_name = llm_model_dict[model_name]['name']
+    model_lora_dir = os.path.join(f"workspace/finetune", model_file_name, 'checkpoints', select_lora, 'adapter_model.bin')
+    if not os.path.exists(model_lora_dir):
+        raise gr.Error("No available Lora, please select a valid one")
     start_time = time.time()
     if not os.path.exists("workspace/data"):
         os.makedirs("workspace/data")
@@ -156,6 +160,10 @@ def on_test(model_name, select_lora, lora_type, temperature,top_p,test_data_file
 
 
 def get_chat_answer(query,model_name,select_lora,lora_type,temperature,top_p,instruction,chatbot):
+    model_file_name = llm_model_dict[model_name]['name']
+    model_lora_dir = os.path.join(f"workspace/finetune", model_file_name, 'checkpoints', select_lora, 'adapter_model.bin')
+    if not os.path.exists(model_lora_dir):
+        raise gr.Error("No available Lora, please select a valid one")
     model = load_model(model_name,select_lora,lora_type,temperature,top_p)
     res , (prompt_length, response_length)=  model.chat(query,chatbot,instruction) 
     chatbot.append([query,res])
