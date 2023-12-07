@@ -18,6 +18,7 @@ def on_train(model_name, select_lora, train_data_files,per_device_train_batch_si
     log_file_path = f'workspace/data/logs/{now_str}.log'  # 定义log文件路径
     os.makedirs(os.path.dirname(log_file_path), exist_ok=True)  # 创建存储log的文件夹
     filelist = []
+    train_data_files = train_data_files if isinstance(train_data_files, list) else [train_data_files]
     for file in train_data_files:
         filename = os.path.basename(file.name)
         shutil.move(file.name, "workspace/data/" + filename)
@@ -88,7 +89,7 @@ def train_model(model_name, project_name, training_data, per_device_train_batch_
         json.dump(data, file, indent=4)
     content = f'''CUDA_VISIBLE_DEVICES={available_gpus[0]} python {current_directory}/train_bash.py --stage sft   --model_name_or_path {model_path}   --do_train     --dataset {project_name}    --template {template}     --finetuning_type lora     --lora_target {lora_target}     --output_dir {current_directory}/workspace/finetune/{model_file_name}/checkpoints/{project_name}  --overwrite_output_dir  --overwrite_cache     --per_device_train_batch_size {per_device_train_batch_size}     --gradient_accumulation_steps 4     --lr_scheduler_type cosine     --logging_steps 10     --save_steps 1000     --learning_rate {learning_rate}     --num_train_epochs {num_train_epochs}     --plot_loss     --fp16  {lora_type_para}
     '''
-    sh_file_name = f'workspace/finetune/{model_file_name}/train_{project_name}.sh'
+    sh_file_name = f'{current_directory}/workspace/finetune/{model_file_name}/train_{project_name}.sh'
 
     with open(sh_file_name , 'w') as file:
         file.write(content)
