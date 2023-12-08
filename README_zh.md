@@ -8,7 +8,7 @@
 
 ### 下载模型并修改配置文件
 
-先从以下链接将PULSE模型下载到本地：[https://huggingface.co/OpenMEDLab/PULSE-7bv5](https://huggingface.co/OpenMEDLab/PULSE-7bv5)
+先从以下链接将PULSE模型下载到本地：[https://huggingface.co/OpenMEDLab/PULSE-7bv5](https://huggingface.co/OpenMEDLab/PULSE-7bv5) 或者 [https://huggingface.co/OpenMEDLab/PULSE-20bv5](https://huggingface.co/OpenMEDLab/PULSE-20bv5)
 
 然后，在 `configs/common_config.py` 文件中修改模型路径为本地路径。可以在 `model_path` 变量中修改路径。找到 profile.d/conda.sh 文件的绝对路径，修改对应的 `conda_env_file`路径。
 

@@ -71,7 +71,6 @@ def load_excel(file_path):
         return [], 'no input or output field'
     log = []
     log.append(f'开始处理数据')
-    
     all_data = []
     # 遍历每一行数据
     for index, row in df.iterrows():
