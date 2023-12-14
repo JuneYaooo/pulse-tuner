@@ -1,12 +1,12 @@
 
 llm_model_dict = {
-"PULSE-6B": {"name": "pulse_7b",
+"PULSE-7B": {"name": "pulse_7b",
         "model_path": "your-path/PULSE-7bv5",
         "template":"pulse",
         "lora_target":"query_key_value"
     },
 "PULSE-20B": {"name": "pulse_20b",
-        "model_path": "your-path/PULSE-20bv5",
+        "model_path": "your-path/PULSE-20b",
         "template":"pulse",
         "lora_target":"q_proj,v_proj"
     },
